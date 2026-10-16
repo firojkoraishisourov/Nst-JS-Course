@@ -1,4 +1,5 @@
 import { Controller, Get, Post } from "@nestjs/common";
+import { UsersService } from "./users.service";
 
 
 //http://localhost:3000/users
@@ -8,11 +9,15 @@ export class UsersController{
 
     @Get()
     getUsers(){
-        return 'You made a GET request to  get all users!'
+        const usersService = new UsersService();
+        return usersService.getAllUsers();
     }
 
     @Post()
     createUser(){
-        return 'A new user has been created!'
+        const user = {id: 3, name: 'sourov', age: 24 , gender: 'male', isMarried: false};
+        const usersService = new UsersService();
+        usersService.createUser(user);
+        return 'A new user has been created!';
     }
 }
