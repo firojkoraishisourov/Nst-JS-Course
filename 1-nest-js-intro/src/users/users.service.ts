@@ -1,7 +1,8 @@
 export class UsersService{
     users: {id: number, name: string, age: number, gender :string, isMarried: boolean}[] = [
         {id: 1, name : 'john', age: 28, gender: 'male', isMarried: false },
-        {id: 2, name : 'mark', age: 32, gender: 'male', isMarried: true }
+        {id: 2, name : 'mark', age: 32, gender: 'male', isMarried: true },
+        {id: 3, name : 'sarah', age: 25, gender: 'female', isMarried: false }
     ]
 
     getAllUsers(){
